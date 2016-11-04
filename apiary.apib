@@ -3,11 +3,11 @@ HOST: http://polls.apiblueprint.org/
 
 # LotteryPicker
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+This API is for a calling UI app to request a set of lottery numbers. 
 
-## Questions Collection [/questions]
+## Generate Numbers [/generatenumbers]
 
-### List All Questions [GET]
+### Set of Numbers [GET]
 
 + Response 200 (application/json)
 
@@ -33,11 +33,12 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
         ]
 
-### Create a New Question [POST]
+## Upload Numbers Draw [/uploadnumbers/{game}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### Upload a CSV file [POST]
+
+This method allows CSV data to be uploaded to the database.  As lottery draws 
+continue this db will need more and more data. 
 
 + Request (application/json)
 
